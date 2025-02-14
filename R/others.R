@@ -18,3 +18,21 @@ outliers = function(s) {
 
   return(res)
 }
+
+pop_var = function(s, pop = TRUE) {
+  m = mean(s)
+
+  if (pop) {
+    return (sum((s - m)^2) / length(s))
+  } else {
+    return (sum((s - m)^2) / (length(s) - 1))
+  }
+}
+
+pop_sd = function(s, pop = TRUE) {
+  return (sqrt(pop_var(s, pop)))
+}
+
+pop_cv <- function(s, pop = TRUE) {
+  pop_sd(s) / mean(s) * 100
+}
