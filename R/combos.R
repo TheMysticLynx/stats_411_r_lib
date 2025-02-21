@@ -39,9 +39,5 @@ comb <- function(n, r) {
     return(1)
   }
 
-  if (r == 1) {
-    return(n)
-  }
-
   factorial(n) / (factorial(r) * factorial(n - r))
 }
