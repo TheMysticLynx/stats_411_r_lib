@@ -25,32 +25,45 @@ ber_sd <- function(p) {
   sqrt(ber_var(p))
 }
 
-#' Find the mean of a uniform distribution
+#' Find the mean of a binomial distribution
 #'
-#' @param x set of values
-#' @return Mean of the uniform distribution
+#' @param n Number of trials
+#' @param p Probability of success
+#' @return Mean of the binomial distribution
 #' @export
-uniform_mean <- function(x) {
-  sum(x / length(x))
+#'
+#' @examples
+#' bin_mean(38, 45)
+unif_mean <- function(min, max) {
+  (min + max) / 2
 }
 
 #' Find the variance of a uniform distribution
 #'
-#' @param x set of values
+#' @param min Minimum value of the uniform distribution
+#' @param max Maximum value of the uniform distribution
 #' @return Variance of the uniform distribution
 #' @export
-uniform_var <- function(x) {
-  mean <- uniform_mean(x)
-  sum(x^2) / length(x) - mean^2
+#'
+#' @examples
+#' unif_var(1, 10)
+#' unif_var(5, 15)
+unif_var <- function(min, max) {
+  ((max - min)^2) / 12
 }
 
 #' Find the standard deviation of a uniform distribution
 #'
-#' @param x set of values
+#' @param min Minimum value of the uniform distribution
+#' @param max Maximum value of the uniform distribution
 #' @return Standard deviation of the uniform distribution
 #' @export
-uniform_sd <- function(x) {
-  sqrt(uniform_var(x))
+#'
+#' @examples
+#' unif_sd(1, 10)
+#' unif_sd(5, 15)
+unif_sd <- function(min, max) {
+  (max - min) / sqrt(12)
 }
 
 #' Find the mean of a discrete distribution
