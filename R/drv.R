@@ -25,15 +25,16 @@ ber_sd <- function(p) {
   sqrt(ber_var(p))
 }
 
-#' Find the mean of a binomial distribution
+#' Find the mean of a uniform distribution
 #'
-#' @param n Number of trials
-#' @param p Probability of success
-#' @return Mean of the binomial distribution
+#' @param min Minimum value of the uniform distribution
+#' @param max Maximum value of the uniform distribution
+#' @return Mean of the uniform distribution
 #' @export
 #'
 #' @examples
-#' bin_mean(38, 45)
+#' unif_mean(5, 15)
+#' unif_mean(1, 10)
 unif_mean <- function(min, max) {
   (min + max) / 2
 }
