@@ -58,3 +58,13 @@ pop_sd <- function(s, pop = TRUE) {
 pop_cv <- function(s, pop = TRUE) {
   pop_sd(s) / mean(s) * 100
 }
+
+#' Prints the imperical rule
+#'
+#' The imperical rule states that for a normal distribution:
+#' - 68.26% of the data falls within 1 standard deviation of the mean
+#' - 95.44% of the data falls within 2 standard deviations of the mean
+#' - 99.74% of the data falls within 3 standard deviations of the mean
+imp <- function() {
+  c(68.26, 95.44, 99.74)
+}
